@@ -1,4 +1,3 @@
-import React from 'react';
 import Profile from './Profile';
 import Button from 'react-bootstrap/esm/Button';
 

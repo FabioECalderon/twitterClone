@@ -3,19 +3,19 @@ import Button from 'react-bootstrap/Button';
 import styled from '@emotion/styled';
 
 const NavLinkStyled = styled(Nav.Link)(({ theme }) => ({
-  borderRadius: '800px',
-  color: 'rgb(33, 37, 41)',
-  paddingRight: '24px',
+  borderRadius: theme.borders.radius.pill,
+  color: theme.colors['gray-900'],
+  paddingRight: theme.spaces[4],
   '&:hover': {
-    backgroundColor: theme.colors.gray,
-    color: 'rgb(33, 37, 41)',
+    backgroundColor: theme.colors['gray-200'],
+    color: theme.colors['gray-900'],
   },
 }));
 
-const IconStyled = styled('i')({
-  fontSize: '1.5rem',
-  marginRight: '1rem',
-});
+const IconStyled = styled('i')(({ theme }) => ({
+  fontSize: theme.fonts[4],
+  marginRight: theme.spaces[3],
+}));
 
 export default function Navigation() {
   const user = {};
