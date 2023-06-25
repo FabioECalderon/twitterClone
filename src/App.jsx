@@ -5,16 +5,16 @@ import Navigation from './components/Navigation';
 import Aside from './components/Aside';
 import Tweet from './components/Tweet';
 import Create from './components/Create';
-import Account from './components/Account';
+import Profile from './components/Profile';
 
 function App() {
-  const user = null;
+  const user = {};
   return (
     <Container className="container-fluid">
       <Row>
         <Col>
           <Navigation />
-          <Account />
+          {user && <Profile />}
         </Col>
         <Col md={6} className="border-start border-end">
           <h1 className="fs-5 my-2 fw-bolder">Home</h1>

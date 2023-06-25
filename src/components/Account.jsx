@@ -1,11 +1,7 @@
-import Profile from './Profile';
 import Button from 'react-bootstrap/esm/Button';
 
 export default function Account() {
-  const user = null;
-  return user ? (
-    <Profile />
-  ) : (
+  return (
     <div className="d-flex mt-2 py-4 border-top">
       <div className="d-flex flex-column flex-grow-1">
         <span>New on Twitter?</span>
