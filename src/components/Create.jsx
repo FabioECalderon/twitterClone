@@ -1,4 +1,3 @@
-import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/esm/Button';
 
@@ -18,7 +17,10 @@ export default function Create() {
               placeholder="What's happening?"
             />
           </Form.Group>
-          <Button variant="primary" className="rounded-pill align-self-end">
+          <Button
+            variant="primary"
+            className="rounded-pill align-self-end text-white"
+          >
             Tweet
           </Button>
         </Form>
