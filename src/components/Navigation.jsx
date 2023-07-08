@@ -1,8 +1,9 @@
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 
-const NavLinkStyled = styled(Nav.Link)(({ theme }) => ({
+const NavLinkStyled = styled(NavLink)(({ theme }) => ({
   borderRadius: theme.borders.radius.pill,
   color: theme.colors['gray-900'],
   paddingRight: theme.spaces[4],
@@ -25,39 +26,39 @@ export default function Navigation() {
         defaultActiveKey="/home"
         className="flex-column fs-5 gap-2 align-items-start"
       >
-        <Nav.Link>
-          <i className="bi bi-twitter fs-2"></i>
-        </Nav.Link>
-        <NavLinkStyled href="/home" active>
+        <NavLink to="/" className="nav-link">
+          <IconStyled className="bi bi-twitter fs-2"></IconStyled>
+        </NavLink>
+        <NavLinkStyled to="/home" className="nav-link">
           <IconStyled className="bi bi-house-door-fill"></IconStyled>
           Home
         </NavLinkStyled>
-        <NavLinkStyled href="/">
+        <NavLinkStyled to="/explore" className="nav-link">
           <IconStyled className="bi bi-hash"></IconStyled>Explore
         </NavLinkStyled>
         {user && (
           <>
-            <NavLinkStyled href="/">
+            <NavLinkStyled to="/" className="nav-link">
               <IconStyled className="bi bi-bell"></IconStyled>
               Notifications
             </NavLinkStyled>
-            <NavLinkStyled href="/">
+            <NavLinkStyled to="/" className="nav-link">
               <IconStyled className="bi bi-envelope"></IconStyled>
               Messages
             </NavLinkStyled>
-            <NavLinkStyled href="/">
+            <NavLinkStyled to="/" className="nav-link">
               <IconStyled className="bi bi-card-list"></IconStyled>
               Lists
             </NavLinkStyled>
-            <NavLinkStyled href="/" className="text-dark">
+            <NavLinkStyled to="/" className="nav-link">
               <IconStyled className="bi bi-bookmark"></IconStyled>
               Bookmarks
             </NavLinkStyled>
-            <NavLinkStyled href="/">
+            <NavLinkStyled to="/" className="nav-link">
               <IconStyled className="bi bi-twitter"></IconStyled>
               Twitter Blue
             </NavLinkStyled>
-            <NavLinkStyled href="/">
+            <NavLinkStyled to="/" className="nav-link">
               <IconStyled className="bi bi-person"></IconStyled>
               Profile
             </NavLinkStyled>
