@@ -3,15 +3,22 @@ import Button from 'react-bootstrap/Button';
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
-const NavLinkStyled = styled(NavLink)(({ theme }) => ({
-  borderRadius: theme.borders.radius.pill,
-  color: theme.colors['gray-900'],
-  paddingRight: theme.spaces[4],
-  '&:hover': {
-    backgroundColor: theme.colors['gray-200'],
-    color: theme.colors['gray-900'],
-  },
-}));
+const NavLinkStyled = styled(NavLink)(({ theme }) => {
+  const foregroundColor = theme.colors['gray-900'];
+  return {
+    borderRadius: theme.borders.radius.pill,
+    color: foregroundColor,
+    paddingRight: theme.spaces[4],
+    '&:hover': {
+      backgroundColor: theme.colors['gray-200'],
+      color: foregroundColor,
+    },
+    '&.active': {
+      backgroundColor: theme.colors['gray-200'],
+      color: foregroundColor,
+    },
+  };
+});
 
 const IconStyled = styled('i')(({ theme }) => ({
   fontSize: theme.fonts[4],
@@ -26,7 +33,7 @@ export default function Navigation() {
         defaultActiveKey="/home"
         className="flex-column fs-5 gap-2 align-items-start"
       >
-        <NavLink to="/" className="nav-link">
+        <NavLink to="/home" className="nav-link">
           <IconStyled className="bi bi-twitter fs-2"></IconStyled>
         </NavLink>
         <NavLinkStyled to="/home" className="nav-link">
