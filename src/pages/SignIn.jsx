@@ -1,7 +1,15 @@
+import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import UserContext from '../containers/UserContext';
 
 export default function SignIn() {
+  const { setUser } = useContext(UserContext);
+  const initialValues = {
+    email: '',
+    password: '',
+  };
+
   return (
     <>
       <h1 className="fs-4 my-2 fw-bolder">Sign In</h1>
